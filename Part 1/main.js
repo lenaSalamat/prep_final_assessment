@@ -53,8 +53,15 @@ function reduce(array, f, acc) {
 // addOne( [3,6,9] ) ==> [4,7,10]
 
 function addOne(array){ // arrays, loops
+	var x=[];
+	while (typeof array==="number"){
+    x.push(y);}
+    return x; 
+	}
  // your code is here
-}
+    }
+   
+
 //=============================================================================
 /*                                    Q2                                     */
 //=============================================================================
@@ -66,7 +73,12 @@ function addOne(array){ // arrays, loops
 // factorial(5); // => 5 * 4 * 3 * 2 * 1 => 120
 
 function factorial(n) {
+	var result=1;
+	if(n>0){
+  result=n*factorial(n-1)
    //your code is here
+}
+return result;
 }
 
 
@@ -87,6 +99,14 @@ var bucketOfSloths = [
 // Note that: the longest name is not only the first name, its first, middle and last name compined.
  
 function longestName(bucketOfSloths) {
+	var long=bucketOfSloths.split(" ");
+	var name=bucketOfSloths[0];
+	for(var i=0;i<bucketOfSloths.length;i++){
+		if(bucketOfSloths[i].length>name.length){
+			name=bucketOfSloths[i]
+		}
+	}
+	return name;
   //your code is here 
 }
 
@@ -98,6 +118,13 @@ function longestName(bucketOfSloths) {
   //solve it using one of the helpers functions(reduce,each,map,filter)
 
   function wordLengths(str){
+  	var x=str.split(" ");
+  	var y=[];
+  	return map(str,function(elem,i){
+  		x=elem[i].length;
+     y.push(x);
+  	});
+  	return y;
   //your code is here
   }
 
@@ -109,6 +136,13 @@ function longestName(bucketOfSloths) {
 // and a character (e.g. "a"), and returns number of times that character occured:
 
   function countOccurrences(string, character) { 
+  	var num=0;
+  	return reduce(string,function(elem,i){
+      if(string[i]===character){
+    num++;
+      }
+  	},0);
+  	return num;
     // your code is here
   }
   // countOccurrences("hello", "l"); // 2
@@ -122,6 +156,10 @@ function longestName(bucketOfSloths) {
   //solve it using one of the helpers functions(reduce,each,map,filter)
 
   function values(obj){
+  	var x=[];
+  	return reduce(obj,function(val,key){
+  		return x.push(val);
+  	})
   // your code is here
   }
   // values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129]; 

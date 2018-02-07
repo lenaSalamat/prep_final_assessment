@@ -5,6 +5,32 @@
   //create a function person when invoked returns the name of that person
 
   function person(name){
+    var per=name;
+    var x=[personA,personB,personC];
+    var count=0;
+    return {
+     sayMyName:function(){
+      return per;
+     }
+     add:function("hello"){
+      return "hello"+" "+per;
+     }
+     addFriend:function(person()){
+      for(var i=0;i<x.length;i++){
+        var y=x[i];
+      }
+      return "you just became friend with"+" "+y;
+     }
+     listFriends:function(count){
+      for(var i=0;i<count.length;i++){
+      if(x.length!==0){
+        count++;
+        }
+    }
+    return count;
+
+   }
+    }
     //your code is here
   }
   var personA=person("jack")
@@ -58,7 +84,40 @@
   // player1.chageState(); // false
 
   //writ your code here .....
-  
+  function players(player){
+  player.player1={
+   name:name,
+  }
+  player.age:age,
+   player.position:position,
+    player.level:level,
+   player.availability:availability
+ }
+  this.addInfo(age, position, level, availability){
+  return 
+   this.age:age,
+   this.position:position,
+    this.level:level,
+   this.availability:availability
+  }
+  this.increase(n){
+    return this.level=n;
+  }
+  this.available(){
+  if(this.availability===true){
+    return true;
+  }
+   return false;
+  }
+  this.chageState(){
+    if(this.availability===true){
+      return false;
+    }
+    if(this.availability===false){
+      return true;
+    }
+  }
+  }
 //=======================================================================
 /*                                  Q3                                 */
 //=======================================================================
@@ -66,13 +125,20 @@
   //create a factory function called makeCar that represents cars,
   // what different attributes cars may have? create two cars object from your factory function and save them in one array called cars!
 
-  function makeCar( ?? ){
+  function makeCar( color,name,type ){
+    return {
+   color:'color',
+   name:'name',
+   type:'type'
+    }
     // TODO: Your code here
   }
-                   
+  var car1=makeCar({color:"red",name:"jeb",type:"forwell"});
+ var car2=makeCar({color:"darkred",name:"newjeb",type:"forwell2"});
   // write function displayCar that can be used to display one car
-
+var cars=[car1,car2]
   function displayCar(car) {
     // TODO: Your code here
+    return car.name+car.color+car.type;
   }
   
